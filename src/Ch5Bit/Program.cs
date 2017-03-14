@@ -9,14 +9,16 @@ namespace Ch5Bit
     {
         public static void Main(string[] args)
         {
-            Insertion(1024, 76, 1, 1);
+            Insertion(1024, 19, 2, 6);
             Console.ReadKey();
         }
 
-        static void Insertion (int n, int m, int i, int j)
+        static void Insertion(int n, int m, int i, int j)
         {
             Console.WriteLine(Convert.ToString(n, 2).PadLeft(11, '0'));
             Console.WriteLine(Convert.ToString(m, 2).PadLeft(11, '0'));
+            Console.WriteLine(Convert.ToString((m <<= i) | n, 2).PadLeft(11, '0'));
+
         }
     }
 }
